@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option go_package ="https://github.com/Thashmi03/netxd_customer";
+package netxd_customer;
+
+service CustomerService{
+    rpc CreateCustomer(Details) returns (DetailResponse);
+}
+message Details {
+    int64 CustomerId=1;
+    string Firstname=2;
+    string Lastname =3;
+    string BankId = 4;
+    string Balance=5;
+    string CreatedAt =6;
+    string UpdatesAt =7;
+    bool IsActive=8;
+}
+message DetailResponse {
+    int64 CustomerId=1;
+    string CreatedAt=2;
+}
