@@ -10,8 +10,8 @@ message Details {
     int64 CustomerId=1;
     string Firstname=2;
     string Lastname =3;
-    string BankId = 4;
-    string Balance=5;
+    int64 BankId = 4;
+    int64 Balance=5;
     string CreatedAt =6;
     string UpdatesAt =7;
     bool IsActive=8;

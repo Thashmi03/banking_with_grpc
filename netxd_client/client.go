@@ -23,15 +23,15 @@ func main() {
 	
 
 	response, err := client.CreateCustomer(context.Background(), &pb.Details{
-		CustomerId: 318,
-		Firstname:  "Thashmigaa",
-		Lastname:   "E M",
-		BankId:     "12345",
-		Balance:    "10000",
+		CustomerId: 320,
+		Firstname:  "Jsri",
+		Lastname:   "R",
+		BankId:     12345,
+		Balance:    100000,
 	})
 	if err != nil {
 		log.Fatalf("Failed to call: %v", err)
 	}
 
-	fmt.Printf("Response: %d\n", response.CustomerId)
+	fmt.Printf("CustomerID: %d\nCreatedTime:%v\n", response.CustomerId,response.CreatedAt)
 }

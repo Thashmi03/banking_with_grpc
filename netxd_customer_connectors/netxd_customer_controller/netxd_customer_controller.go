@@ -17,11 +17,11 @@ var(
 
 func(s *RPCServer)CreateCustomer(ctx context.Context,req * c.Details)(*c.DetailResponse,error){
 	dbProfile:=&netxddalmodels.Customer{
-		CustomerId: 318,
-		Firstname:  "Thashmigaa",
-		Lastname:   "E M",
-		BankId:     "12345",
-		Balance:    "10000",
+		CustomerId: req.CustomerId,
+		Firstname:  req.Firstname,
+		Lastname:   req.Lastname,
+		BankId:     req.BankId,
+		Balance:    req.Balance,
 	}
 	res,err:=CustomerService.CreateCustomer(dbProfile)
 	if err != nil {
