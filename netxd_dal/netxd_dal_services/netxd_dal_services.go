@@ -4,7 +4,9 @@ import (
 	netxddalinterface "banking_with_grpc/netxd_dal/netxd_dal_interface"
 	netxddalmodels "banking_with_grpc/netxd_dal/netxd_dal_models"
 	"context"
+	
 	"log"
+
 	"time"
 
 	"go.mongodb.org/mongo-driver/bson"
@@ -31,6 +33,7 @@ func (c * CustomerService)CreateCustomer(detail * netxddalmodels.Customer)(*netx
 	if err != nil {
 		log.Fatal(err)
 	}
+
 	detail.IsActive = true
 	detail.CreatedAt = time.Now()
 	detail.UpdatedAt = detail.CreatedAt

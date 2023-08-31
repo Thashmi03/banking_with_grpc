@@ -23,11 +23,12 @@ func main() {
 	
 
 	response, err := client.CreateCustomer(context.Background(), &pb.Details{
-		CustomerId: 320,
+		CustomerId: 317,
 		Firstname:  "Jsri",
 		Lastname:   "R",
 		BankId:     12345,
 		Balance:    100000,
+		IsActive:   false,
 	})
 	if err != nil {
 		log.Fatalf("Failed to call: %v", err)
